@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "dc1c904d-d7fc-4b7f-ae50-2ff31cfb9c6f",
+		"name": "VP-PatientPortal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29490045"
+	},
+	"item": [
+		{
+			"name": "insurance-image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/insurance/parse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"parse"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "parse-image",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/insurance/parse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"insurance",
+								"parse"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Jan 2025 11:38:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"policyProvider\": \"Auto Insurance\",\n    \"policyNumber\": \"123 456 789\",\n    \"addressLine1\": \"1234 Main St.\",\n    \"city\": \"Anytown\",\n    \"state\": \"USA\",\n    \"zip\": \"012340\",\n    \"effectiveDate\": \"01/01/00\",\n    \"expiryDate\": \"12/31/00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "cigna_blurred1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Aarthi/Pictures/cigna_blurred1.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/insurance/parse/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"parse",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "parse_uploaded1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Aarthi/Pictures/cigna_blurred1.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/insurance/parse/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"insurance",
+								"parse",
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Jan 2025 16:05:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Public\",\n    \"policyProvider\": \"Cigna\",\n    \"policyNumber\": \"1234567\",\n    \"policyPlanName\": \"Open Access Plus\",\n    \"premiumAllocation\": {\n        \"primaryCare\": \"0%\",\n        \"specialist\": \"0%\",\n        \"urgentCare\": \"0%\",\n        \"emergencyRoom\": \"0%\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "cigna_blurred(incorrect_result)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Aarthi/Pictures/cigna_blurred.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/insurance/parse/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"parse",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "parse_uploaded",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Aarthi/Pictures/cigna_blurred.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/insurance/parse/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"insurance",
+								"parse",
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Jan 2025 16:40:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstName\": \"Sandy\",\n    \"lastName\": \"Baker\",\n    \"policyProvider\": \"Cigna\",\n    \"policyNumber\": \"U2345678901\",\n    \"policyPlanName\": \"Cigna OPEN ACCESS PLUS\",\n    \"addressLine1\": \"1234 Elm Street\",\n    \"addressLine2\": \"Suite 567\",\n    \"city\": \"Springfield\",\n    \"state\": \"IL\",\n    \"zip\": \"62704\",\n    \"effectiveDate\": \"06/15/2021\",\n    \"expiryDate\": \"12/31/2021\",\n    \"premiumAllocation\": {\n        \"primaryCare\": \"10%\",\n        \"specialist\": \"15%\",\n        \"urgentCare\": \"15%\",\n        \"emergencyRoom\": \"15%\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
