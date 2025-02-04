@@ -53,7 +53,7 @@ public class ImageParserController {
         var decodedImage = new ByteArrayResource(decodedBytes);
 
         var userMessage = new UserMessage(userPrompt,
-                new Media(MimeTypeUtils.parseMimeType(Objects.requireNonNull(file.getContentType())), decodedImage));
+                new Media(MimeTypeUtils.parseMimeType(Objects.requireNonNull(file.getContentType())), file.getResource()));
 
         return chatClient.prompt(new Prompt(userMessage))
                 .call()
